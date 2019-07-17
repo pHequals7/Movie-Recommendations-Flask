@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Recommendations</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			Reco Engine
+		</div>
+		<h2>Your Recommended Movies for {{moviename}}</h2>
+		
+	</div>
+	</header>
+	<p style="color:blue;font-size:20;text-align: center;"><b>Movies</b></p>
+	<div class="results">
+	<ol>	
+		{% for preds in prediction %}
+			<li><a href="{{preds[2]}}"><p class="center"> {{preds[0]}} </p></li>
+			<p class="center"><img src="{{preds[3]}}"
+				height="250"
+				width="250" /></p>
+		{% endfor %}
+	</ol>
+	</div>
+
+</body>
+</html>
