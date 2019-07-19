@@ -5,6 +5,7 @@ body{
 }
 
 .container{
+	text-align:center;
 	width:100%;
 	margin: auto;
 	overflow: hidden;
@@ -52,9 +53,4 @@ header h2{
 
 .results{
 	text-align:center;
-	border-radius: 15px 50px;
-    background: #345fe4;
-    padding: 20px; 
-    width: 200px;
-    height: 150px;
 }
