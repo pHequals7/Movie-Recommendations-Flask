@@ -9,18 +9,20 @@
 	<header>
 		<div class="container">
 		<div id="brandname">
-			Movie Recommendations with Flask
-		</div>
-		<h2>Similar Movies predicted using Wiki-plots</h2>
-		
-	</div>
+			Movie Recommendations with Flask (1904-2017)
+	
 	</header>
+
+	<footer>
+		<div class="center">
+			<h4>Uses parsed wiki plots which is embedded using Universal Sentence Encoder</h4>
+		</div>
+	</footer>
 
 	<div class="ml-container">
 
-		<form action="{{ url_for('predict')}}" method="POST">
-		<p>Enter Movie Name Here</p>
-		<!-- <input type="text" name="comment"/> -->
+		<form action="{{ url_for('predict')}}" method="POST" align="center">
+		<p class ="center">Enter Movie Name Here</p>
 		<input type="text" name="movie" maxlength="100" size="25">
 		<br/>
 
@@ -32,3 +34,4 @@
 
 </body>
 </html>
+
