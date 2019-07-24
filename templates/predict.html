@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<style>
+	img {
+  	float: left;
+		}
+	</style>
+
 	<title>Recommendations</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/blocks.css/dist/blocks.min.css" />
 </head>
 <body>
 
 	<header>
 		<div class="container">
-		<div id="brandname">
-			Reco Engine
-		</div>
-		<h2>Your Recommended Movies for {{moviename}}</h2>
-		
+		<p class="center"><h2>Your Recommended Movies for : "{{moviename}}"</h2></p>	
 	</div>
 	</header>
-	<p style="color:blue;font-size:20;text-align: center;"><b>Movies</b></p>
-	<div class="results">
 	<ol>	
 		{% for preds in prediction %}
-			<li><a href="{{preds[2]}}"><p class="center"> {{preds[0]}} </p></li>
-			<p class="center"><img src="{{preds[3]}}"
+			<div class="dark themed">
+			<li><a href="{{preds[2]}}"><button class="accent block"><h3>{{preds[0]}}</h3></button></li>
+			<div class="wrapper block pictureWrapper">
+			<img class="picture" src="{{preds[4]}}"
 				height="250"
-				width="250" /></p>
+				width="250" />
+			<p class='rights'>{{preds[3]}}</p>
+			</div>
+		</div>
 		{% endfor %}
 	</ol>
-	</div>
 
 </body>
 </html>
