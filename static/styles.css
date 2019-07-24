@@ -1,7 +1,8 @@
 body{
-	font:15px/1.5 Arial, Helvetica,sans-serif;
-	padding: 0px;
-	background-color:#f4f3f3;
+    font-family: system-ui, sans-serif;
+        width: 96%;
+        max-width: 600px;
+        margin: 0 auto;;
 }
 
 .container{
@@ -11,8 +12,10 @@ body{
 	overflow: hidden;
 }
 
-header{
-	background:#03A9F4;#35434a;
+header{text-align:center;
+	font-size: large;
+	color:#fff;
+	background:#03A9F4:;
 	border-bottom:#448AFF 3px solid;
 	height:120px;
 	width:100%;
@@ -45,11 +48,14 @@ header h2{
 }
 
 
-.btn-info {background-color: #2196F3;
+.btn-info {background-color: #21f378;
 	height:40px;
-	width:100px;} /* Blue */
-.btn-info:hover {background: #0b7dda;}
+	width:100px;} 
+.btn-info:hover {background: #daed07;}
 
+.rights {
+	text-align: right;
+}
 
 .results{
 	text-align:center;
