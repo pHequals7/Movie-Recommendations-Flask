@@ -2,15 +2,13 @@
 <html>
 <head>
 	<title>Home</title>
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+	<link rel="stylesheet" type="text/css" href="/static/styles.css">
+	<link rel="stylesheet" href="https://unpkg.com/blocks.css/dist/blocks.min.css" />
 </head>
 <body>
 
 	<header>
-		<div class="container">
-		<div id="brandname">
-			Movie Recommendations with Flask (1904-2017)
-	
+		<p class ="center">Movie Recommendations with Flask (1904-2017)</p>
 	</header>
 
 	<footer>
@@ -19,15 +17,17 @@
 		</div>
 	</footer>
 
-	<div class="ml-container">
+	<div class="container">
 
 		<form action="{{ url_for('predict')}}" method="POST" align="center">
 		<p class ="center">Enter Movie Name Here</p>
-		<input type="text" name="movie" maxlength="100" size="25">
+		<div class="searchBlock">
+        	<div class="fixed wrapper block">
+				<input type="text" name="movie" maxlength="150" size="15" placeholder="Enter movie title..">
+			</div>
 		<br/>
-
-		<input type="submit" class="btn-info" value="Recommend">
-		
+			<button class="block"><p class ="center"><input type="submit" value="Recommend"></p></button>
+		</div>
 	</form>
 		
 	</div>	
